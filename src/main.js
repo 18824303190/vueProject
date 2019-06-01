@@ -2,7 +2,7 @@
  * Created by Kevin on 2019/5/31.
  */
 import Vue from 'vue'
-import init from './init'
+import App from './app'
 import router from './router'
 import request from './utils/request'
 
@@ -12,6 +12,7 @@ import VueLazyload from 'vue-lazyload'
 import 'swiper/dist/css/swiper.css'
 
 import $ from 'jquery'
+Vue.use($);
 
 import 'layui-layer/layer'
 import 'layui-layer/layer.css'
@@ -34,6 +35,6 @@ Vue.config.productionTip = false;
 new Vue({
   el: '#app',
   router,
-  components: { init },
-  template: '<init/>'
+  components: { App },
+  template: '<app/>'
 });

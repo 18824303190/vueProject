@@ -2,6 +2,10 @@
 ```html
 node 6.0+(v8.11.2)
 npm 3.0+(v5.6.10)
+jQuery 3.0+(v3.4.1)
+Vue 3.0+(v2.5.1)
+Layui-layer 3.0+(v3.0.1)
+vue-awesome-swiper 3.0+(v3.1.3)
 ```
 
 ### 项目结构
@@ -41,6 +45,6 @@ npm 3.0+(v5.6.10)
 ### 生产环境
 * Run 'npm run build'
 
-### 安装相关
-UI组件iview(https://www.iviewui.com/docs/guide/start)
+### 默认样式
+* 1rem = 16px
 

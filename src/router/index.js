@@ -6,6 +6,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import NProgress from 'nprogress'
 import 'nprogress/nprogress.css' //这个样式必须引入
+import GYHome_3 from '../components/Home/GYHome_Three'
 
 NProgress.inc(0.2);
 NProgress.configure({easing: 'ease', speed: 500, showSpinner: false});
@@ -17,8 +18,8 @@ const router = new Router({
   linkActiveClass: 'linkActive',
   routes: [
     {
-      path: '*',
-      reject: '/index'
+      path: '/',
+      component: GYHome_3
     }
   ],
 });
