@@ -1,0 +1,142 @@
+@import "./variables";
+
+.gy-overflow() {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+// 单行显示省略号
+.gy-single-ellipsis {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// 多行显示省略
+.gy-more-ellipsis(@line: 3) {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: @line;  //这里是在第三行有省略号
+  overflow: hidden;
+}
+
+// 混合img样式
+.gy-img-style(@width: 44px, @height: 44px,@color: @gy-gray) {
+  display: inline-block;
+  object-fit: cover;
+  width: @width;
+  height: @height;
+}
+
+// 不换行
+.gy-text-nowrap () {
+  overflow: hidden;
+  word-wrap: break-word;
+}
+
+// 输入框placeholder字体颜色
+.gy-placeholder-color(@color: #999) {
+  /* WebKit browsers */
+  &::-webkit-input-placeholder{
+    color: @color;
+  }
+  /* Mozilla Firefox 4 to 18 */
+  &:-moz-placeholder {
+    color: @color;
+  }
+  /* Mozilla Firefox 19+ */
+  &::-moz-placeholder {
+    color: @color;
+  }
+  /* Internet Explorer 10+ */
+  &:-ms-input-placeholder {
+    color: @color;
+  }
+}
+
+// 阴影
+.gy-header-shadow() {
+  box-shadow:0 1px 4px 0 rgba(0,0,0,.1);
+}
+
+.gy-button-primary-hover {
+  &:hover {
+    transition: all .5s;
+    opacity: 1;
+    background-color: #23679c;
+  }
+  &[disabled]:hover{
+    transition: all .5s;
+    background-color: #f6f6f6;
+  }
+}
+
+.gy-button-ghost-gray-hover {
+  color: @gy-light-black-nine;
+  &:hover {
+    opacity: 1;
+    transition: all .5s;
+    border-color: #dddddd;
+    background-color: #f6f6f6;
+    color: @gy-light-black-nine;
+  }
+  &[disabled]{
+    background-color: #eeeeee;
+    border-color: transparent;
+    color: @gy-light-black-nine;
+  }
+  &[disabled]:hover{
+    transition: all .5s;
+    background-color: #eeeeee;
+    border-color: transparent;
+    color: @gy-light-black-nine;
+  }
+}
+
+.gy-button-ghost-default-hover {
+  color: @gy-default;
+  border-color: @gy-default;
+  &:hover {
+    opacity: 1;
+    transition: all .5s;
+    background-color: #f6f6f6;
+  }
+  &[disabled]{
+    background-color: #eeeeee;
+    border-color: transparent;
+    color: @gy-light-black-nine;
+  }
+  &[disabled]:hover{
+    transition: all .5s;
+    background-color: #eeeeee;
+    border-color: transparent;
+    color: @gy-light-black-nine;
+  }
+}
+// 复选框，单选框样式
+.gy-defined-input-style {
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-block;
+  vertical-align: top;
+  width: @gy-20px;
+  margin: 0 5px 0 0;
+  height: @gy-20px;
+  outline: 0;
+  cursor: pointer;
+}
+
+.gy-defined-input-style:checked:after {
+  position: absolute;
+  top: @gy-zero;
+  left: @gy-zero;
+  width: @gy-20px;
+  height: @gy-20px;
+  color: @gy-white;
+}
+
+.gy-defined-input-style:checked:after {
+  transform: scale(1);
+}
