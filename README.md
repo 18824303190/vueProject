@@ -18,7 +18,7 @@ vue-awesome-swiper 3.0+(v3.1.3)
   |--components     组件
   |--router         路由配置
   |--store          store相关都在
-  |--themes         主题(全局覆盖CSS: themes/ways-theme.less。导入为变量和minix: themes/index.less )
+  |--themes         主题
   |--utils          工具
   |--views          容器视图局入口(主要是header)
   |--main.js        全局入口js

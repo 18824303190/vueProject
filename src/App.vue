@@ -47,7 +47,7 @@
             }
         },
         mounted() {
-            layer.alert('Hello FF!')
+
         }
     }
 </script>

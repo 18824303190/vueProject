@@ -4,6 +4,180 @@
   width: @gy-full-width;
   height: @gy-80px;
   position: fixed;
-  top: 0;
-  left: 0;
+  top: @gy-zero;
+  left: @gy-zero;
+
+  .header {
+    width: 1200px;
+    height: @gy-full-height;
+    margin: @gy-zero auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    img.logo {
+      height: @gy-60px;
+    }
+
+    .sys-menu {
+      height: @gy-60px;
+
+      ul {
+        height: @gy-full-height;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+      }
+
+      ul li {
+        margin-right: @gy-20px;
+        padding-bottom: @gy-10px;
+        border-bottom: 2px solid transparent;
+        cursor: pointer;
+
+        a {
+          color: #6c6c6c;
+          font-size: 1rem;
+          font-family: serif;
+        }
+
+        &:hover {
+          color: @gy-text-hover-color;
+          border-bottom: 2px solid @gy-text-hover-color;
+        }
+      }
+      li.chosen {
+        border-bottom: 2px solid @gy-text-hover-color;
+
+        a {
+          color: @gy-text-hover-color;
+        }
+      }
+    }
+
+    .user-bar {
+      height: @gy-full-height;
+      display: flex;
+      align-items: center;
+
+      .un-logged-in {
+        width: 10rem;
+        height: 1.5625rem;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        background: #c8a675;
+        border-radius: @gy-100px;
+        font-size: .875rem;
+        color: @gy-white;
+        font-family: @gy-font-basic;
+
+        .item {
+          width: 30%;
+          text-align: center;
+          line-height: 1.5rem;
+          cursor: pointer;
+        }
+
+        .item.do-login {
+          height: 1.4375rem;
+          background: @gy-white;
+          color: @gy-text-hover-color;
+          border-radius: 2rem;
+          margin-top: 1px;
+        }
+      }
+
+      .ard-logged-in {
+        width: 16rem;
+        height: @gy-full-height;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+
+        .logged {
+          width: 9.75rem;
+          height: 1.5625rem;
+          line-height: 24px;
+          display: flex;
+          flex-flow: row nowrap;
+          justify-content: space-between;
+          background: #c8a675;
+          border-radius: @gy-100px;
+          font-size: .875rem;
+          color: @gy-white;
+          font-family: @gy-font-basic;
+          padding: 0 @gy-5px;
+
+          .user-balance {
+            width: 60%;
+            font-size: .875rem;
+            font-weight: 300;
+          }
+
+          .to-deposit {
+            width: 30%;
+            height: 1.4375rem;
+            background: #fff;
+            margin-top: 1px;
+            margin-right: -.25rem;
+            border-radius: @gy-100px;
+            color: @gy-text-hover-color;
+            text-align: center;
+            cursor: pointer;
+          }
+        }
+        .user-center {
+          width: 4.6875rem;
+          height: 1.5625rem;
+          line-height: 25px;
+          border: 1px solid @gy-text-hover-color;
+          border-radius: 100px;
+          text-align: center;
+          font-size: .875rem;
+          color: @gy-text-hover-color;
+        }
+        .user-center-dialog {
+          width: 7.625rem;
+          position: absolute;
+          top: 4.25rem;
+          right: -2rem;
+          border: 1px solid @gy-text-hover-color;
+          border-radius: .25rem;
+          padding: @gy-5px @gy-zero;
+
+          i {
+            width: @gy-zero;
+            height: @gy-zero;
+            overflow: hidden;
+            border-width: .5rem;
+            border-color: transparent transparent #c2a77b transparent;
+            border-style: solid;
+            position: absolute;
+            top: -1rem;
+            left: 3.3125rem;
+          }
+
+          ul li {
+            height: 2.125rem;
+            line-height: 2.125rem;
+            color: #6c6c6c;
+            font-size: .875rem;
+            text-align: center;
+            cursor: pointer;
+
+            &:hover {
+              color: #c8a675;
+              background: #fbf6f0;
+              a {color: #c8a675;}
+            }
+          }
+        }
+      }
+    }
+  }
+
 }
